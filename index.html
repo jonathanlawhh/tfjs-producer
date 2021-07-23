@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+</head>
+<body>
+
+</body>
+
+<script defer>
+    async function predict() {
+        let model = await tf.loadGraphModel('/tfjs_model/model.json');
+
+        let r = model.execute("testttt")
+    }
+
+    predict()
+
+</script>
+</html>
